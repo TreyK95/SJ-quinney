@@ -1,0 +1,185 @@
+/* Container styles */
+#custom-widget-container {
+  display: grid;
+  gap: var(--card-gap, 20px); /* Default gap if not overridden via inline styles */
+}
+
+#custom-widget-container.custom-per-row-1col {
+  grid-template-columns: repeat(1, 1fr);
+}
+#custom-widget-container.custom-per-row-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+#custom-widget-container.custom-per-row-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+#custom-widget-container.custom-per-row-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+#custom-widget-container.custom-per-row-5col {
+  grid-template-columns: repeat(5, 1fr);
+}
+#custom-widget-container.custom-per-row-6col {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Card styles */
+#custom-widget-container .uu-card {
+  background: #fff;
+  border-radius: 0; /* Default: square corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Rounded corners */
+#custom-widget-container .uu-card.rounded-corners {
+  border-radius: 8px;
+}
+
+/* Card hover effects */
+#custom-widget-container .uu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+#custom-widget-container .uu-card .uu-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Card body */
+#custom-widget-container .uu-card .uu-card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#custom-widget-container .uu-card .uu-card-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+#custom-widget-container .uu-card .uu-card-title {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  margin: 0px!important;
+}
+
+#custom-widget-container .uu-card .uu-card-schedule-header {
+  font-size: 0.875rem;
+  color: #000;
+  font-weight: bold;
+  margin: 0px!important;
+}
+
+/* Buttons */
+#custom-widget-container .uu-card .uu-card-buttons {
+  display: inline-block;
+}
+
+#custom-widget-container .uu-card .uu-btn {
+  text-decoration: none;
+  padding: 0px 15px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  height: 22px;
+}
+
+#custom-widget-container .uu-card .uu-btn-1, #custom-widget-container .uu-card .uu-btn-2 {
+  background: #BE0000;
+  color: #fff;
+  margin: 0px!important;
+}
+
+
+
+
+/* Layout variations */
+#custom-widget-container.custom-layout-vert-img-top .uu-card {
+  flex-direction: column;
+}
+
+#custom-widget-container.custom-layout-horz-img-left .uu-card {
+  display: flex;
+  flex-direction: row;
+}
+
+#custom-widget-container.custom-layout-horz-img-left .uu-card-image {
+  flex: 1;
+}
+
+#custom-widget-container.custom-layout-horz-img-left .uu-card-body {
+  flex: 2;
+}
+
+#custom-widget-container.custom-layout-horz-img-right .uu-card {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#custom-widget-container.custom-layout-horz-img-right .uu-card-image {
+  flex: 1;
+}
+
+#custom-widget-container.custom-layout-horz-img-right .uu-card-body {
+  flex: 2;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  #custom-widget-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  #custom-widget-container .uu-card .uu-card-image img {
+    height: 215px!important;
+  }
+  #custom-widget-container .uu-card {
+    flex-direction: column;
+  }
+
+  #custom-widget-container.custom-layout-horz-img-left .uu-card,
+  #custom-widget-container.custom-layout-horz-img-right .uu-card {
+    flex-direction: column;
+  }
+
+  #custom-widget-container .uu-card .uu-card-image {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #custom-widget-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
+
+  #custom-widget-container .uu-card {
+    flex-direction: column;
+  }
+
+  #custom-widget-container.custom-layout-horz-img-left .uu-card,
+  #custom-widget-container.custom-layout-horz-img-right .uu-card {
+    flex-direction: column;
+  }
+
+  #custom-widget-container .uu-card .uu-card-image {
+    height: 200px;
+  }
+  #custom-widget-container .uu-card .uu-card-image img {
+    width: 100%;
+    height: 323px;
+    display: block;
+    object-fit: cover;
+  }
+  #custom-widget-container .uu-card .uu-card-image {
+    height: 323px;
+  }
+}

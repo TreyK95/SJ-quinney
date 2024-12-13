@@ -1,0 +1,71 @@
+<?php
+/*
+Widget Name: U of U Another Starter Widget
+Description: This is a Another Starter Widget Template 
+Author: Brian Thurber
+Author URI: https://umc.utah.edu
+*/
+
+class Another_Widget extends SiteOrigin_Widget {
+    function __construct() {
+        parent::__construct(
+            'another-widget', // Widget ID
+            __('Another Widget', 'text-domain'), // Widget Name
+            array(
+                'description' => __('Another SiteOrigin widget.', 'text-domain')
+            ),
+            array(),
+            array(
+                // FORM FIELDS
+                'text' => array(
+                    'type' => 'text',
+                    'label' => __('Text Field', 'text-domain')
+                )
+            ),
+            get_stylesheet_directory() . '/siteorigin-widgets/another-widget'
+        );
+
+        // Register frontend and admin assets
+        $this->register_assets();
+    }
+
+    function get_template_name($instance) {
+        error_log("Attempting to load template: uu-another-template");
+        return 'uu-another-template';
+    }
+    
+    function get_template_dir($instance) {
+        error_log("Template directory being used: tpl");
+        return 'tpl';
+    }
+
+    // OVERRIDE THE WIDGET METHOD TO DIRECTLY INCLUDE THE TEMPLATE FOR TESTING
+    function widget($args, $instance) {
+        include get_stylesheet_directory() . '/siteorigin-widgets/another-widget/tpl/uu-another-template.php';
+    }
+
+    // REGISTER FRONTEND STYLES & SCRIPTS
+    function register_assets() {
+        $this->register_frontend_scripts(
+            array(
+                array(
+                    'uu-another-widget-scripts',
+                    get_stylesheet_directory_uri() . '/siteorigin-widgets/another-widget/js/uu-honors-hero-widget.js',
+                    array('jquery'),
+                    '1.0',
+                    true
+                )
+            )
+        );
+        $this->register_frontend_styles(
+            array(
+                array(
+                    'uu-another-widget-styles',
+                    get_stylesheet_directory_uri() . '/siteorigin-widgets/another-widget/css/uu-another-widget.css',
+                    array(),
+                    '1.0'
+                ),
+            )
+        );
+    }
+}

@@ -1,3 +1,273 @@
+/* Main Container Layout */
+.lectures-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-department {
+  color: #000;
+}
+
+/* Left Sidebar Filters */
+.lectures-filters {
+  flex: 0 0 250px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-height: 350px;
+  background: #be0000 url('https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/11/red-line-top-left-cropped.png') no-repeat;
+}
+
+.lectures-filters h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Search Input Styling */
+.page-id-44516 .facetwp-facet {
+  margin-bottom: 20px;
+}
+
+.page-id-44516 .facetwp-facet input.facetwp-search,
+.facetwp-facet input.facetwp-location,
+.facetwp-search,
+.facetwp-dropdown {
+  width: 100% !important;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin: 0;
+  min-width: 100%!important;
+  padding-right: 21px!important;
+}
+.page-id-44516 .facetwp-facet input {
+  width: 90% !important;
+  padding: 8px !important;
+  padding-right: 8px;
+  border: none !important;
+  border-radius: 4px !important;
+  margin: 0 !important;
+  min-width: 90% !important;
+  padding-right: 16px !important;
+  background-color: #FFF;
+  color:rgba(0, 0, 0, 0.847)!important;
+}
+.page-id-44516 .facetwp-autocomplete-update {
+  display: none
+}
+.page-id-44516 .facetwp-dropdown {
+   background-color: #FFFFFF;
+ }
+.filter-button {
+
+  background-color: white;
+  color: #b30000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 8px 20px;
+  width: 88px;
+  height: 40px;
+}
+
+a.uu-btn {
+  padding: 0 15px !important;
+}
+
+/* Right Content Area */
+.lectures-list {
+  flex: 1;
+}
+
+/* Lecture Entry Styling */
+.lecture-entry {
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0px 10px 20px rgba(84, 117, 145, 0.1);
+  overflow: hidden;
+}
+
+.lecture-header {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.lecture-image {
+  flex: 0 0 150px;
+  margin-bottom: -10px;
+}
+
+.lecture-image img {
+  width: 100%;
+  height: auto;
+}
+
+.lecture-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.lecture-info > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.year-label,
+.lecture-info h3 {
+  font-family: "Source Sans 3";
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.year-label {
+  color: #be0000;
+}
+
+.lecture-info h3 {
+  color: #b30000;
+  margin: 0;
+  display: inline;
+}
+
+.department {
+  color: #000;
+  margin: 5px 0;
+}
+
+.abstract {
+  color: #47494A;
+  margin-top: 10px;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  color: #C41E3A;
+  width: 75px;
+  height: 75px;
+}
+
+.expand-button img {
+  width: 15px;
+  height: 9px;
+}
+
+/* Expanded Content */
+.lecture-details {
+  display: none;
+  padding: 20px;
+  background-color: #F0F3F6;
+  border-top: 1px solid #eee;
+  margin-top:3px;
+}
+
+.lecture-entry.open .lecture-details {
+  display: block;
+}
+
+.youtube-button {
+  display: inline-block;
+  background-color: #C41E3A;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between items */
+  margin: 20px 0; /* Space around the pagination block */
+}
+
+/* Pagination Links */
+.pagination a, .pagination span {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid #be000;
+  border-radius: 4px;
+  color: #be0000; /* Link color */
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Active Page */
+.pagination .current {
+  font-weight: bold;
+  color: #fff;
+  background-color: #be0000;
+  border-color: #be0000;
+}
+
+/* Hover Effect */
+.pagination a:hover {
+  color: #fff;
+  background-color: #be0000;
+  border-color: #be0000;
+}
+
+/* Arrows */
+.pagination .prev, .pagination .next {
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+/* Accessibility Improvement */
+.pagination a[aria-disabled="true"] {
+  color: #ccc;
+  pointer-events: none;
+  cursor: default;
+  border-color: #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .lectures-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .lectures-filters {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .lecture-header {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+  }
+
+  .lecture-image {
+    flex: 0 0 335px;
+  }
+}
+
+@media (max-width: 380px) {
+  .facetwp-facet input.facetwp-search,
+  .facetwp-facet input.facetwp-location {
+    min-width: 92% !important;
+    width: 92% !important;
+  }
+}
 /* styling for marquee widget + quick links */
 
 .u-of-u-marquee .u-of-u-marquee-content {
@@ -24,27 +294,27 @@
 
 @media screen and (max-width: 940px) {
   .uu-quick-links-tab a {
-  flex: 1 1 30% !important;
+    flex: 1 1 30% !important;
   }
 
 }
 
 
 @media screen and (max-width: 767px) {
-  .uu-quick-links-tab-wrapper.qlt-offset-bottom .uu-quick-links-tab {
-    bottom: -180px !important;
+  .page-id-9 .uu-quick-links-tab-wrapper.qlt-offset-bottom .uu-quick-links-tab {
+    bottom: -180px!important; }
+
+  .u-of-u-marquee .u-of-u-marquee-content yes{
+    padding: 0px 30px!important;
   }
 
-  .u-of-u-marquee .u-of-u-marquee-content {
-    padding: 0px 30px !important;
+  @media screen and (max-width: 390px) {
+    #pg-9-1 > .panel-row-style {
+      padding: 50% 5% 20% 5%!important;
+    }
   }
-}
-@media screen and (max-width: 390px) {
-  #pg-9-1 > .panel-row-style {
-    padding: 50% 5% 20% 5%!important;
-  }
-}
 
+}
 /* styling for Honors at the University of Utah section */
 
 .honors-text {
@@ -58,51 +328,26 @@
 
 
 #pg-9-1 > .panel-row-style {
-background-size: auto!important;
+  background-size: auto!important;
   background-position: right 25% bottom!important;
   background-repeat: no-repeat;
 
 }
 
-
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-
-
-
-.curls, .hijab {
-  left: -15%!important;
-}
-
-.braids, .red-hoodie {
-  left: 25% !important;
-}
-.backpack {
-  left: 65%!important;
-}
-}
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 1250px) and (max-width: 1470px) {
   #pg-9-1 > .panel-row-style {
-    background-position: right -250% bottom !important;
-  }
-  .curls, .hijab {
-    left: -30% !important;
-  }
-  .braids, .red-hoodie {
-    left: 17% !important
-  }
-  .backpack {
-    left: 64% !important;
-  }
-}
+    background-position: right -15% bottom !important;
+  }}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  #pg-9-1 > .panel-row-style {
+    background-position: right -55% bottom !important;
+  }}
 
 
 .image-section {
   position: relative;
+  background: transparent;
   min-height: 600px;
-  background-image: url("/wp-content/uploads/sites/106/2024/10/grey-line-left.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .image-wrapper {
@@ -116,63 +361,33 @@ background-size: auto!important;
 
 .braids {
   top: 0px;
-  left: 35%;
+  left: 45%;
 
 }
 
 
 .curls {
   top: 75px;
-  left: 0%;
+  left: 10%;
 
 }
 
 .red-hoodie {
   top: 290px;
-  left: 35%;
+  left: 45%;
 
 }
 
 .backpack {
   top: 150px;
-  left: 70%;
+  left: 80%;
 
 }
 
 .hijab {
   top: 365px;
-  left: 0%;
+  left: 10%;
 
-}
-
-
-@media screen and (max-width: 500px) {
-  .image-wrapper{
-    width: 95px;
-    height: 182px;
-  }
-  .curls, .hijab {
-    left: 0;
-  }
-
-  .hijab {
-    top: 285px;
-  }
-.red-hoodie {
-  top: 250px;
-}
-.braids {
-  top: 40px;
-}
-  .braids, .red-hoodie {
-    left: 37%
-  }
-.backpack {
-  left: 73%;
-}
-  #pgc-9-1-1{
-    min-height: 450px!important;
-  }
 }
 
 /* Styling for 'Your Community at the U section on Homepage */
@@ -362,6 +577,629 @@ background-size: auto!important;
 }
 
 /* Styling for Honors at a glance Section */
+
+#pgc-9-4-0 > .panel-cell-style {
+  min-height: 600px;
+  min-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  min-height: 450px;
+}
+@media screen and (min-width: 1024px) and (max-width: 2100px) {
+  #pgc-9-4-0 > .panel-cell-style{
+    background-position: bottom;
+  }}
+#pl-9 .so-panel {
+  margin-bottom: 0!important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.glance-stat {
+  color: #BE0000;
+  font-family: Montserrat;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.grid-item span {
+  color: #000;
+  font-family: "Source Sans 3";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
+}
+
+#pg-w6706d56231953-0 {
+  margin: 0!important;
+}
+
+#pg-w6706d56231953-1 {
+  margin: 0!important;
+}
+
+#pg-w6706d56231953-2 {
+  margin: 0!important;
+}
+
+@media screen and (max-width: 780px) {
+  #pgc-9-4-0 {
+    display: flex;
+    order: 2;
+  }
+}
+
+/* juicer button */
+
+.juicer-feed a {
+  height: 40px!important;
+  width: 165px!important;
+  border-radius: 4px!important;
+  background-color: #BE0000!important;
+  border: none!important;
+}
+
+
+/* STYLING FOR ADMISSIONS PAGE */
+
+/* Application cards */
+#uu-card-widget-container #admissions .uu-card-widget-card.left-align {
+  height: 496px;
+}
+
+/* Styling for admissions timeline */
+
+.timeline {
+  display: flex;
+  align-items: center;
+}
+.vertical-timeline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline-item {
+  background-color: #F8F8F8;
+  padding: 10px 25px;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 306px;
+  height: 87px;
+  align-content: center;
+}
+
+.timeline-item h2 {
+  color: #be0000;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 41px;
+  margin: 0!important;
+}
+
+.timeline-item p {
+  font-size: 21px;
+  color: #18191a;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0!important;
+}
+
+.timeline-connector {
+  width: 70px;
+  height: 4px;
+  background-color: #be0000;
+}
+
+.vertical-timeline-connector {
+  width: 4px;
+  height: 40px;
+  background-color: #be0000;
+  margin-bottom: 0px;
+}
+
+
+/* styling application buttons */
+.track-app {
+  border: 4px solid #be0000!important;
+}
+.sowb-button span {
+  font-weight: bold;
+}
+
+.so-widget-sow-button-grid-default-dee5f1ef67c6-131 .sow-buttons-grid {
+  align-items: center;
+  display: flex!important;
+  gap: 20px 20px;
+  justify-content: center!important;
+}
+
+/* Styling for Application FAQs accordion */
+
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel:nth-child(1) .sow-accordion-panel-header {
+  border-radius: 8px 8px 0 0;
+}
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel:nth-child(3) .sow-accordion-panel-header {
+  border-radius: 0 0 8px 8px;
+}
+/* Default border-radius on the 3rd accordion panel's header */
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel:nth-child(3) .sow-accordion-panel-header {
+  border-radius: 0 0 8px 8px;
+}
+
+/* Remove the border-radius from the header when the panel is open */
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel.sow-accordion-panel-open:nth-child(3) .sow-accordion-panel-header {
+  border-radius: 0;
+}
+
+/* Apply the border-radius to the content when the panel is open */
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel.sow-accordion-panel-open:nth-child(3) .sow-accordion-panel-content {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+/* Make sure the accordion panel and content respect the border-radius */
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel:nth-child(3) .sow-accordion-panel-content {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add a background to ensure the corners are smooth */
+.so-widget-sow-accordion-default-788c115aff8c-131 .sow-accordion .sow-accordion-panel:nth-child(3) {
+  background: #ddd;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Admissions Page 'Class Profile' section */
+
+.class-profile {
+  max-width: 840px;
+  margin: auto;
+}
+
+.class-profile #uu-card-widget-container .uu-card-widget-card .uu-card-widget-card-title-red {
+  color: var(--Utah-Red, #BE0000);
+  text-align: center;
+  /* H1 */
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.class-profile .uu-card-widget-card-copy {
+  color: #000;
+  text-align: center;
+
+  /* H5 */
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; /* 150% */
+}
+
+.class-profile #uu-card-widget-container .uu-card-widget-card.center-align {
+  text-align: center;
+  width: 250px;
+  height: 173px;
+}
+.class-profile .panel-grid.panel-no-style {
+  justify-content: normal!important;
+}
+.class-profile #pg-w67097aac1a8da-0 {
+  margin-bottom: 0!important;
+}
+
+.class-profile #pg-w67097aac1a8da-1 {
+  margin-bottom: 0!important;
+}
+
+.class-profile .siteorigin-panels-stretch #uu-card-widget-container {
+  margin: 0!important;
+}
+
+.page-id-9 .class-profile #uu-card-widget-container {
+  margin: 0!important;
+}
+
+/* First year Pathway */
+
+.first-year #uu-card-widget-container {
+  margin: 0!important;
+}
+
+/* upper division */
+
+.upper-division #uu-card-widget-container {
+  margin: 0!important;
+}
+.page-id-9 .upper-division #uu-card-widget-container .uu-card-widget-card.left-align {
+  height: 441px;
+}
+
+
+
+
+/* styling for marquee widget + quick links*/
+
+
+
+.u-of-u-marquee .u-of-u-marquee-content {
+  max-width: 1100px!important;
+}
+[data-nav-type="lines"] .owl-dots {
+  bottom: 20%!important;
+}
+.u-of-u-marquee-block.left a.u-of-u-marquee-btn  {
+  margin-left: 0px;
+  width: 165px;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #BE0000;
+  color: white;
+  border-radius: 4px;
+}
+.u-of-u-marquee-block.left a.u-of-u-marquee-btn:hover {
+  background-color: white;
+  color: #BE0000;
+}
+
+@media screen and (max-width: 940px) {
+  .uu-quick-links-tab a {
+    flex: 1 1 30% !important;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .page-id-9 .uu-quick-links-tab-wrapper.qlt-offset-bottom .uu-quick-links-tab {
+    bottom: -180px !important;
+  }
+
+  .u-of-u-marquee .u-of-u-marquee-content {
+    padding: 0px 30px !important;
+  }
+}
+@media screen and (max-width: 390px) {
+  #pg-9-1 > .panel-row-style {
+    padding: 50% 5% 20% 5%!important;
+  }
+}
+
+/* styling for Honors at the University of Utah section*/
+
+.honors-text {
+  color: #000;
+  font-family: "Source Sans 3";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
+}
+
+
+#pg-9-1 > .panel-row-style {
+  background-size: auto!important;
+  background-position: right 25% bottom!important;
+  background-repeat: no-repeat;
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+
+
+
+  .curls, .hijab {
+    left: -15%!important;
+  }
+
+  .braids, .red-hoodie {
+    left: 25% !important;
+  }
+  .backpack {
+    left: 65%!important;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  #pg-9-1 > .panel-row-style {
+    background-position: right -250% bottom !important;
+  }
+  .curls, .hijab {
+    left: -30% !important;
+  }
+  .braids, .red-hoodie {
+    left: 17% !important
+  }
+  .backpack {
+    left: 64% !important;
+  }
+}
+
+
+.image-section {
+  position: relative;
+  min-height: 600px;
+  background-image: url("/wp-content/uploads/sites/106/2024/10/grey-line-left.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 141.073px;
+  height: 270.241px;
+  border-radius: 8px;
+
+}
+
+
+.braids {
+  top: 0px;
+  left: 35%;
+
+}
+
+
+.curls {
+  top: 75px;
+  left: 0%;
+
+}
+
+.red-hoodie {
+  top: 290px;
+  left: 35%;
+
+}
+
+.backpack {
+  top: 150px;
+  left: 70%;
+
+}
+
+.hijab {
+  top: 365px;
+  left: 0%;
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .image-wrapper{
+    width: 95px;
+    height: 182px;
+  }
+  .curls, .hijab {
+    left: 0;
+  }
+
+  .hijab {
+    top: 285px;
+  }
+  .red-hoodie {
+    top: 250px;
+  }
+  .braids {
+    top: 40px;
+  }
+  .braids, .red-hoodie {
+    left: 37%
+  }
+  .backpack {
+    left: 73%;
+  }
+  #pgc-9-1-1{
+    min-height: 450px!important;
+  }
+}
+
+/* Styling for 'Your Community at the U section on Homepage*/
+.textwidget .custom-html-widget {
+  max-width: 1140px;
+}
+.parent-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  text-align: left;
+  background-color: #BE0000;
+  color: #fff;
+  width: 1140px;
+  height: 720px;
+  font-family: Montserrat, 'sans-serif';
+  border-radius: 20px;
+  position: relative;
+  background-image: url('/wp-content/uploads/sites/106/2024/10/red-line-right.png'); /* Background overlay image*/
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  left: -10%;
+}
+.section-header {
+  margin-bottom: 50px;
+}
+
+.left-content, .right-content {
+  position: relative;
+  z-index: 1;
+}
+
+.left-content {
+  flex: 1;
+}
+
+/* Title and Description*/
+.section-header h2 {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.section-header p {
+  font-family: "Source Sans 3";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
+
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Individual stat boxes*/
+.stat-box {
+  background-color: #fff;
+  color: #D32F2F;
+  padding: 29px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px 0px rgba(84, 117, 145, 0.10);
+  display: flex;
+  width: 275px;
+  height: 170px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.stat-box h3 {
+  color: #BE0000;
+  font-family: Montserrat;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0!important;
+}
+
+.stat-box p {
+  color: #000;
+  font-family: "Source Sans 3";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
+}
+
+/* Right side with woman's background image*/
+.right-content {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+.right-content img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+  position: relative;
+  top: 5%;
+  margin-left: -15px;
+}
+
+/* styling for Card Stat (%) on homepage*/
+
+.after-grad .card-stat {
+  color: #BE0000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.after-grad span {
+  color: #18191A;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .parent-section {
+    width: auto;
+    left: 0;
+    padding: 30px;
+  }
+
+  .right-content {
+    top: 9%;
+
+  }
+  .right-content img {
+    height: auto;
+    width: auto;
+    top: 0;
+    margin-left: 0;
+    object-fit: unset;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .parent-section {
+    width: auto!important;
+    height: auto!important;
+    left: 0%;
+    padding: 60px 40px;
+  }
+
+  .right-content {
+    display: none;
+  }
+  .stat-box {
+    height: auto;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .stats-grid {
+    display: block;
+
+  }
+  .stat-box {
+    margin-bottom: 15px;
+  }
+
+  .left-content {
+    padding-right: 0;
+  }
+}
+
+/* Styling for Honors at a glance Section*/
 .image-section2 {
   position: relative;
   background: transparent;
@@ -403,17 +1241,17 @@ background-size: auto!important;
 }
 
 
-    @media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
 
-    .usa-hoodie {
-        left: 0;
-    }
-    .polo, .hoodie {
-        left: 37%!important;
-    }
-    .white-top {
-        left: 75%!important;
-    }
+  .usa-hoodie {
+    left: 0;
+  }
+  .polo, .hoodie {
+    left: 37%!important;
+  }
+  .white-top {
+    left: 75%!important;
+  }
 
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -443,80 +1281,80 @@ background-size: auto!important;
   #panel-9-4-0-0 {
     width: 100% !important;
   }
-.image-wrapper2 {
-width: 95px;
-height: 182px;
-  background-image: url("/wp-content/uploads/sites/106/2024/10/grey-line-left.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  .image-wrapper2 {
+    width: 95px;
+    height: 182px;
+    background-image: url("/wp-content/uploads/sites/106/2024/10/grey-line-left.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
-    }
-    .usa-hoodie {
-        left: 0!important;
-    }
-    .polo, .hoodie {
-        left: 37% !important;
-    }
-    .white-top {
-        left: 75% !important;
-    }
-    .polo {
-        top: 50px!important;
-    }
+  }
+  .usa-hoodie {
+    left: 0!important;
+  }
+  .polo, .hoodie {
+    left: 37% !important;
+  }
+  .white-top {
+    left: 75% !important;
+  }
+  .polo {
+    top: 50px!important;
+  }
 }
 
 #pgc-9-4-0 > .panel-cell-style {
 
-min-width: 100%;
+  min-width: 100%;
 }
 
 .grid-container {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto;
-gap: 10px;
-padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 20px;
 }
 
 .glance-stat {
-color: #BE0000;
-font-family: Montserrat;
-font-size: 52px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: #BE0000;
+  font-family: Montserrat;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .grid-item span {
-color: #000;
-font-family: "Source Sans 3";
-font-size: 17px;
-font-style: normal;
-font-weight: 400;
-line-height: 25.5px;
+  color: #000;
+  font-family: "Source Sans 3";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px;
 }
 
 #pg-w6706d56231953-0 {
-margin: 0!important;
+  margin: 0!important;
 }
 
 #pg-w6706d56231953-1 {
-margin: 0!important;
+  margin: 0!important;
 }
 
 #pg-w6706d56231953-2 {
-margin: 0!important;
+  margin: 0!important;
 }
 
 @media screen and (max-width: 780px) {
-#pgc-9-4-0 {
-display: flex;
-order: 2!important;
-}
+  #pgc-9-4-0 {
+    display: flex;
+    order: 2!important;
+  }
 }
 
-/* juicer button */
+/* juicer button*/
 
 .juicer-feed a {
   height: 40px!important;
@@ -527,9 +1365,9 @@ order: 2!important;
 }
 
 
-/* STYLING FOR ADMISSIONS PAGE */
+/* STYLING FOR ADMISSIONS PAGE*/
 
-/* Honors Admissions - Hero SPLIT STYLING */
+/* Honors Admissions - Hero SPLIT STYLING*/
 #panel-131-0-0-0 {
   padding: 0!important;
 }
@@ -539,7 +1377,7 @@ order: 2!important;
   display: flex;
 }
 .admissions-left h1 {
- color: #ffffff;
+  color: #ffffff;
   line-height: normal!important;
 }
 .admissions-left {
@@ -553,14 +1391,14 @@ order: 2!important;
 .admissions-left p {
   font-family: 'Source Sans 3', sans-serif;
 }
-/* Parent container with fixed dimensions */
+/* Parent container with fixed dimensions*/
 .admissions-parent-container {
   width: auto;
   height: 620px;
   display: flex;
 }
 
-/* Left Content (Text and Dropdown) */
+/* Left Content (Text and Dropdown)*/
 .admissions-left {
   width: 50%;
   padding: 85px;
@@ -570,7 +1408,7 @@ order: 2!important;
   box-sizing: border-box;
 }
 
-/* Right Content (Image) */
+/* Right Content (Image)*/
 .admissions-right {
   width: 50%;
   overflow: hidden;
@@ -597,6 +1435,8 @@ order: 2!important;
     padding: 20px;
     text-align: center;
     order: 2;
+    height: 450px;
+
   }
 
   .admissions-right {
@@ -616,11 +1456,11 @@ order: 2!important;
 }
 
 /* Application cards */
-#uu-card-widget-container .uu-card-widget-card.left-align {
-  height: 496px;
+.admissions-left-card #uu-card-widget-container  .uu-card-widget-card.left-align {
+  height: 492px!important;
 }
 
-/* Styling for admissions timeline */
+/* Styling for admissions timeline*/
 
 .timeline {
   display: flex;
@@ -642,7 +1482,7 @@ order: 2!important;
 }
 
 .timeline-item h2 {
-    color: #be0000;
+  color: #be0000;
   font-family: Montserrat;
   font-size: 26px;
   font-style: normal;
@@ -668,11 +1508,11 @@ order: 2!important;
 }
 
 .vertical-timeline-connector {
-    width: 4px;
-    height: 40px;
-    background-color: #be0000;
-    margin-bottom: 0px;
-  }
+  width: 4px;
+  height: 40px;
+  background-color: #be0000;
+  margin-bottom: 0px;
+}
 
 @media screen and (max-width: 1100px) {
   .timeline-item h2 {
@@ -693,13 +1533,13 @@ order: 2!important;
   }
 
 }
-/* APPLICATION MATERIALS CARDS */
+/* APPLICATION MATERIALS CARDS*/
 
 .admissions-left-card #uu-card-widget-container .uu-card-widget-card, .admissions-right-card #uu-card-widget-container .uu-card-widget-card {
   margin: 0!important;
 }
 
-/* styling application buttons */
+/* styling application buttons*/
 .track-app {
   border: 4px solid #be0000!important;
 }
@@ -714,17 +1554,17 @@ order: 2!important;
   justify-content: center!important;
 }
 
-/* Admissions Page 'Class Profile' section */
+/* Admissions Page 'Class Profile' section*/
 
 .class-profile {
-max-width: 840px;
+  max-width: 840px;
   margin: auto;
 }
 
 .class-profile #uu-card-widget-container .uu-card-widget-card .uu-card-widget-card-title-red {
   color: #BE0000;
   text-align: center;
-  /* H1 */
+  /* H1*/
   font-family: Montserrat;
   font-size: 36px;
   font-style: normal;
@@ -736,7 +1576,7 @@ max-width: 840px;
   color: #000;
   text-align: center;
 
-  /* H5 */
+  /* H5*/
   font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
@@ -768,7 +1608,7 @@ max-width: 840px;
 }
 
 .class-profile .siteorigin-panels-stretch #uu-card-widget-container {
-margin: 0!important;
+  margin: 0!important;
 }
 
 .class-profile #uu-card-widget-container {
@@ -776,38 +1616,36 @@ margin: 0!important;
 }
 
 @media screen and (max-width: 1024px) {
-#pg-131-6 > .panel-row-style {
-  background-color: #f0f3f6;
-  padding: 60px!important;
-}}
-/* First year Pathway */
+  #pg-131-6 > .panel-row-style {
+    background-color: #f0f3f6;
+    padding: 60px!important;
+  }}
+/* First year Pathway*/
 
 .first-year #uu-card-widget-container {
   margin: 0!important;
 }
 
-/* upper division */
+/* upper division*/
 
 .upper-division #uu-card-widget-container {
   margin: 0!important;
 }
-.upper-division #uu-card-widget-container .uu-card-widget-card.left-align {
-  height: 441px;
-}
 
-/* Styling for Hero Selection Box Functionality */
+
+/* Styling for Hero Selection Box Functionality*/
 #pg-131-7, #pg-131-8, #pg-131-9, #pg-131-10,
 #pg-131-11, #pg-131-12,
 #pg-131-13 {
-  display: none; /* Hide all parent divs by default */
+  display: none; /* Hide all parent divs by default*/
 }
 
 .incoming-first-year {
-  display: flex; /* Show incoming first-year content by default */
+  display: flex; /* Show incoming first-year content by default*/
 }
 
 .selection-box {
- display: flex;
+  display: flex;
 }
 
 .selection-box p {
@@ -815,7 +1653,26 @@ margin: 0!important;
   font-family: 'Source Sans 3', sans-serif;
   margin-right: 20px;
 }
+.selection-box2 {
+  display: flex;
+}
 
+.selection-box2 p {
+  font-weight: 700;
+  font-family: 'Source Sans 3', sans-serif;
+  margin-right: 10px;
+}
+.selection-box2 select {
+  height: 40px;
+  min-width: 240px;
+  width: 75%;
+  padding: 8px 15px 8px 15px;
+  color: #1e1e1e;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: none;
+}
 .selection-box select {
   height: 40px;
   min-width: 240px;
@@ -827,8 +1684,25 @@ margin: 0!important;
   margin-top: 10px;
   border: none;
 }
+@media screen and (max-width: 780px) {
+  .selection-box {
+    display: block;
 
-/* ABOUT HONORS STYLING */
+  }
+
+  .selection-box p {
+    margin: 0px!important;
+  }
+  .selection-box2 {
+    display: block;
+
+  }
+
+  .selection-box2 p {
+    margin: 0px!important;
+  }
+}
+/* ABOUT HONORS STYLING*/
 
 
 .about-hero {
@@ -856,110 +1730,25 @@ margin: 0!important;
 }
 .container {
   width: 100%;
-  position: relative; /* Allows absolutely positioning the red box within the container */
+  position: relative; /* Allows absolutely positioning the red box within the container*/
   min-height: 697px;
 }
 
-.hero-image {
-  width: 80%;
-  height: 100%; /* Set to fill container height */
-  background: url('https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/10/honors-center.jpg') right/cover no-repeat;
-  position: absolute;
-  top: 0;
-  left: 30%;
-  z-index: 1; /* Place behind the red box */
-}
 
-.red-box {
-  background: #be0000;
-  color: white;
-  padding: 185px 150px;
-  max-width: 590px;
-  width: 590px;
-  height: auto;
-  text-align: left;
-  z-index: 2; /* Position above the hero image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 20px 20px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10% !important;
-  background-image: url("https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/10/red-line-about.png");
-  background-position: top left -150%;
-  background-repeat: no-repeat;
+
+.dean #pg-361-3 > .panel-row-style {
+  background-color: #f8f8f8;
+  background-image: url(https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/10/grey-line-message.png);
+  background-position: center left 15%;
   background-size: contain;
+  padding: 60px 0px 60px 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  background-repeat: no-repeat!important;
 }
 
-.red-box-content {
-  position: relative;
-  z-index: 2;
-}
 
-.red-box h3 {
-  font-size: 2.25rem;
-  margin-bottom: 10px;
-  color: white;
-}
 
-.red-box p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.arrow-down {
-  display: inline-block;
-  font-size: 1.5rem;
-  height: 31px;
-  width: 30px;
-  transition: transform 0.3s ease; /* Smooth transition for hover */
-
-  /* Define the animation */
-  animation: none; /* No animation by default */
-}
-
-/* Bobbing animation keyframes */
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Trigger the animation on hover */
-.arrow-down:hover {
-  animation: bob 0.6s ease-in-out infinite;
-}
-
-/* Responsive Styles */
-
-@media screen and (min-width: 780px) and (max-width: 1025px) {
-  .red-box {
-    width: 350px;
-    top: 5% !important
-  }
-}
-@media (max-width: 768px) {
-  .red-box {
-    position: static;
-    transform: none;
-    margin: 0;
-    max-width: 90%; /* Make it responsive */
-    width: auto;
-    padding: 50px;
-    border-radius: 0;
-  }
-  .container {
-    display: inline;
-  }
-
-  .hero-image {
-    height: 400px;
-    width: 100%;
-    left: 0;
-    position: relative;
-  }
-}
 
 
 .quote-slider1 {
@@ -1047,6 +1836,17 @@ margin: 0!important;
 .quote-slider6 h4, .quote-slider7 h4 {
   color: white!important;
 }
+
+@media screen and (min-width: 780px) and (max-width: 1050px) {
+  #pgc-361-2-0 > .panel-cell-style {
+    background-image: url(https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/10/grey-line-message.png);
+    background-size: contain;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+  }
+}
+
+
 @media screen and (max-width: 500px) {
   .quote-slider1, .quote-slider2, .quote-slider3, .quote-slider4, .quote-slider5, .quote-slider6, .quote-slider7 {
     padding: 20px;
@@ -1064,4 +1864,120 @@ margin: 0!important;
 
 .values #uu-card-widget-container .uu-card-widget-card.left-align {
   height: 575px!important;
+}
+
+/* Meet the team*/
+
+#panel-521-0-0-0 {
+  padding: 0px!important;
+}
+
+/* STYLING FOR LEFT / RIGHT COL BACKGROUND IMAGES */
+
+.left-col {
+  background-image: url('https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/11/tours-lines.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left 5%;
+}
+.advising {
+  background-image: url('https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/11/tours-lines.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left -20%;
+}
+.right-col {
+  background-image: url('https://stage.honors.umc.utah.edu/wp-content/uploads/sites/106/2024/11/Group-243.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left 95%;
+}
+@media (min-width: 1910px) and (max-width: 1930px) and (min-height: 990px) and (max-height: 1000px) {
+  .left-col {
+    background-position: top left 10% !important;
+  }
+  .right-col {
+    background-position: top left 90% !important;
+  }
+  .advising {
+    background-position: top left -5% !important;
+  }
+}
+
+@media screen and (min-width: 1730px) {
+  .left-col {
+    background-position: top left 25% ;
+  }
+  .right-col {
+    background-position: top left 74% ;
+  }
+  .advising {
+    background-position: top left 18% ;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1500px) {
+  .left-col {
+    background-position: top left 25% !important;
+  }
+  .right-col {
+    background-position: top left 74% !important;
+  }
+  .advising {
+    background-position: top left 18% !important;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .left-col {
+    background-position: top left -25%;
+  }
+  .right-col {
+    background-position: top left 130%;
+  }
+  .advising {
+    background-position: top left -75%;
+  }
+}
+
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+  .left-col {
+    background-position: top left -100%;
+  }
+ .right-col {
+   background-position: top right -100%;
+ }
+  .advising {
+
+    background-position: top left -450%;
+  }
+  #visit-right {
+    background-position: top right -350% !important;
+  }
+}
+
+/* STYLES FOR HONORS GIVE PAGE */
+
+.page-id-712 .arrow-icon  {
+  width: 120px;
+  height: 22px;
+}
+
+.uu-team-member-widget-img .main-photo {
+  position: relative;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  max-height: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+@media screen and (max-width: 780px) {
+#pg-44429-1 {
+  margin-top: 150px!important;
+}
+.page-id-44429 .red-box {
+  top: 38% !important;
+}
 }
